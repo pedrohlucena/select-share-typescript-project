@@ -45,11 +45,14 @@ function initMap(coordinates: Coordinates) {
         center: coordinates,
         zoom: 20,
     })
+    new google.maps.Marker({
+        position: coordinates,
+        map: map,
+    })
 }
-
-async function main() {
+function main() {
     try {
-        await appendGoogleMapsSDKScriptTag()
+        appendGoogleMapsSDKScriptTag()
         form.addEventListener('submit', addAddressHandler)
     } catch (error) {
         if (error instanceof Error) {
