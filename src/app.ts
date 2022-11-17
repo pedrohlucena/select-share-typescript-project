@@ -50,6 +50,7 @@ function initMap(coordinates: Coordinates) {
         map: map,
     })
 }
+
 function main() {
     try {
         appendGoogleMapsSDKScriptTag()
